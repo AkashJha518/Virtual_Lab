@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://vjs.zencdn.net/7.17.0/video-js.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../..../../../images/vlab-logo.png" type="image/x-icon">
+
+
+    <title>
+        JK master slave
+    </title>
+    <link rel="stylesheet" href="JK.css" />
+</head>
+
+<body>
+    <header>
+        <div>
+            <!-- <img class="logo" src="../../../images/logo.png"> -->
+            <img class="logo" src="https://www.vlab.andcollege.du.ac.in/images/logo.png">
+
+            <h1>V-Lab @ ANDC</h1>
+        </div>
+        <ul class="navigation">
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../../../index.html#labs_section">Labs</a></li>
+            <li><a href="../../../index.html#team">Team</a></li>
+            <li><a href="https://www.andcollege.du.ac.in/" target="_blank" rel="noopener noreferrer">College Website</a>
+            </li>
+        </ul>
+    </header>
+    <div class="exp-heading">
+        <h1>To design JK Master-Slave Flip-Flop design using elementary gates.</h1>
+    </div>
+    <nav>
+        <div class="boxq">
+            <a class="internal_link" href="#aim">
+                <img class="icon"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBmpbB3jSjMF-FDgIL1E-eRN6eeCDLSsvoAQ&usqp=CAU"><br>
+                Aim</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#theory">
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/512/1648/1648697.png"><br>
+                Theory</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#procedure">
+                <img class="icon"
+                    src="https://cdn4.iconfinder.com/data/icons/project-management-1-11/65/23-512.png"><br>
+                Procedure</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#animation">
+                <img class="icon"
+                    src="https://static.rfstat.com/renderforest/images/v2/landing-pics/logo-animation/editable-minimal.png?v=6"><br>
+                Animation</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#simulator">
+                <img class="icon"
+                    src="https://thumbs.dreamstime.com/b/computer-simulation-icon-flat-style-vr-device-vector-illustration-black-round-background-long-shadow-technology-149360530.jpg"><br>
+                Simulator</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#observation">
+                <img class="icon"
+                    src="https://img.freepik.com/free-vector/business-management-vector_53876-44131.jpg?size=338&ext=jpg"><br>
+                Observations</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#result">
+                <img class="icon"
+                    src="https://cdn4.iconfinder.com/data/icons/collection-of-online-business-icons/64/Board_Chart_Results_Business-512.png"><br>
+                Result</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#precaution">
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/512/2698/2698937.png"><br>
+                Precaution</a>
+        </div>
+        <div class="boxq">
+            <a class="internal_link" href="#references">
+                <img class="icon" src="https://image.pngaaa.com/134/5592134-middle.png"><br>
+                References</a>
+        </div>
+    </nav>
+    <section id="exp">
+        <div class="container">
+            <div class="box" id="aim">
+                <div class="title">
+                    <h2 class="heading">Aim</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc">To design JK Master-Slave Flip-Flop design using elementary gates.</p>
+                </div>
+            </div>
+            <div class="box" id="apparatus">
+                <div class="title">
+                    <h2 class="heading">Apparatus</h2>
+                </div>
+                <div class="desc1">
+                    <ol class="desc">
+                        <li>One 74LS10(3-input-nand gate) IC</li>
+                        <li>Three 74LS00(2-input-nand gate) IC</li>
+                        <li>Two 5 Volt supply volatge</li>
+                        <li>One Clock and one not gate/inverter</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="box" id="theory">
+                <div class="title">
+                    <h1 class="heading">Principle</h1>
+                </div>
+                <p class="desc">
+                    Master Slave is a type of JK flip flop in which race around condition problem is removed. In this flip flop there is two stage first stage is Master and second is Slave.
+                </p>
+                <h1 class="desc-heading">Race Around Condition</h1>
+                <p class="desc">
+                    Race around Condition: Toggling more than once within a clock cycle.
+                    <br>
+                    <div class="desc">
+                        Race around condition can be avoided by <br>
+                            <ol class="desc">
+                                <li>Master Slave Topology</li>
+                                <li>tp < ∆t < T</li>
+                                <li> Edge Triggering</li>
+                            </ol>
+                            <p>where,</p>
+                            &rightarrow; tp = pulse width <br>
+                            &rightarrow; ∆t = time interval equal to the propagation delay through two NAND gates <br>
+                            &rightarrow; T = Time period of the pulse
+                    </div>
+                            
+                </p>
+                <img src="images/Master Slave.png" width="1150" alt=""> <br>
+                <h1 class="desc-heading">How the race around condition is removed?</h1>
+                <p class="desc">
+                    As shown in above Figure there is a clock(CLK) which is
+                    connected to first stage(Master) and via
+                    inverter to second stage(Slave) i.e., if clock is 1 then first stage gets 1 and second stage
+                    gets 0. <br> When clock is 1 at that instant stage 1 is on and stage 2 is off and when 0,
+                    stage
+                    1 is off and stage 2 is on. And due to this action the output of first stage transferd to
+                    stage
+                    2 when first stage is off and second stage is on and hence the race around condition is
+                    removed.
+                </p>
+                <div class="text-center my-2 py-2"
+                style="font-size: 25px;background-color: rgba(244, 246, 248, 0.514);">
+                <b class="text-center text-danger">Truth Table</b>
+                <table class="table table-hover table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">clk</th>
+                            <th scope="col">J</th>
+                            <th scope="col">K</th>
+                            <th scope="col">Q</th>
+                            <th scope="col">Q<sup>'</sup></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>&uarr;</th>
+                            <td>0</td>
+                            <td>0</td>
+                            <td colspan="2">Previous</td>
+
+                        </tr>
+                        <tr>
+                            <th>&uarr;</th>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <th>&uarr;</th>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>&uarr;</th>
+                            <td>1</td>
+                            <td>1</td>
+                            <td colspan="2">Toggle</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="desc">
+                <h2>Formula:-</h2>
+                <p>To find next state <br> Q(n+1) = J*Q'(n) + K'*Q(n)</p>
+                <p>Where,</p>
+                <ul>
+                    <li>Q(n) &rAarr; Previous state or output of Jk master slave</li>
+                    <li>Q(n+1) &rAarr; Next state or output of Jk master slave</li>
+                    <li>J,K &rAarr; Inputs of JK master slave</li>
+                </ul>
+            </div>
+            <div class="desc">
+                <h2>Working:-</h2>
+                <ol>
+                    <li>Master is positve level triggred and Slave is negative level triggred</li>
+                    <li>When clock pulse is one master is activate and slave is deactivated, when clock pulse goes to zero master deactivates and slave activates.</li>
+                    <li>For different combination of JK Truth Table shown above</li>
+                </ol>
+            </div>
+            </div>
+
+            <div class="box" id="procedure">
+                <div class="title">
+                    <h2 class="heading">Procedure</h2>
+                </div>
+                <div class="desc1">
+                    <ol type="1" class="desc">
+                        <li> To design JK Master-Slave their is requirement of one 3-input nand gate IC(74LS10) and three 2-input nand gate IC(74LS00).</li>
+                        <li> Connect the circuit as shown in figure.</li>
+                        <li> Connect 5V supply to the circuit.</li>
+                        <li> Turn on the supply and write the reading.</li>
+                        <li> And verify it from the Truth-Table.</li>
+                    </ol>
+                </div>
+                    
+            </div>
+            <div class="box" id="animation">
+                <div class="title">
+                    <h2 class="heading">Animation</h2>
+                </div>
+        </div>
+    </section>
+    <!-- VideoJS to beautify video player -->
+    <script src="https://vjs.zencdn.net/7.17.0/video.min.js"></script>
+</body>
+
+</html>
