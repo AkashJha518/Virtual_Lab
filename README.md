@@ -1,6 +1,6 @@
 # Virtual_Lab
 
-[Click here] to see the webpage(https://akashjha518.github.io/Virtual_Lab/)
+[Click here](https://akashjha518.github.io/Virtual_Lab/) to see the webpage
 
 ## 📝 Description
 
