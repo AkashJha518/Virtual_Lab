@@ -1,5 +1,6 @@
 # Virtual_Lab
-<a href=" https://akashjha518.github.io/Virtual_Lab/" target="_blank">Click here to see the webpage</a>
+
+[Click here] to see the webpage(https://akashjha518.github.io/Virtual_Lab/)
 
 ## 📝 Description
 
