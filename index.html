@@ -8,7 +8,7 @@
 
 
     <title>
-        JK master slave
+        JK Master Slave
     </title>
     <link rel="stylesheet" href="JK.css" />
 </head>
@@ -16,7 +16,6 @@
 <body>
     <header>
         <div>
-            <!-- <img class="logo" src="../../../images/logo.png"> -->
             <img class="logo" src="https://www.vlab.andcollege.du.ac.in/images/logo.png">
 
             <h1>V-Lab @ ANDC</h1>
@@ -113,27 +112,30 @@
                     <h1 class="heading">Principle</h1>
                 </div>
                 <p class="desc">
-                    Master Slave is a type of JK flip flop in which race around condition problem is removed. In this flip flop there is two stage first stage is Master and second is Slave.
+                    Master Slave is a type of JK flip flop in which race around condition problem is removed. In this
+                    flip flop there is two stage first stage is Master and second is Slave.
                 </p>
                 <h1 class="desc-heading">Race Around Condition</h1>
                 <p class="desc">
                     Race around Condition: Toggling more than once within a clock cycle.
                     <br>
-                    <div class="desc">
-                        Race around condition can be avoided by <br>
-                            <ol class="desc">
-                                <li>Master Slave Topology</li>
-                                <li>tp < ∆t < T</li>
-                                <li> Edge Triggering</li>
-                            </ol>
-                            <p>where,</p>
-                            &rightarrow; tp = pulse width <br>
-                            &rightarrow; ∆t = time interval equal to the propagation delay through two NAND gates <br>
-                            &rightarrow; T = Time period of the pulse
-                    </div>
-                            
+                <div class="desc">
+                    Race around condition can be avoided by <br>
+                    <ol class="desc">
+                        <li>Master Slave Topology</li>
+                        <li>tp < ∆t < T</li>
+                        <li> Edge Triggering</li>
+                    </ol>
+                    <p>where,</p>
+                    &rightarrow; tp = pulse width <br>
+                    &rightarrow; ∆t = time interval equal to the propagation delay through two NAND gates <br>
+                    &rightarrow; T = Time period of the pulse
+                </div>
+
                 </p>
-                <img src="images/Master Slave.png" width="1150" alt=""> <br>
+                <img src="images/Master Slave.png"
+                    style="width: 100%; max-width: 800px; height: auto; display: block; margin: 20px auto;"
+                    alt="JK Master Slave Circuit Diagram"> <br>
                 <h1 class="desc-heading">How the race around condition is removed?</h1>
                 <p class="desc">
                     As shown in above Figure there is a clock(CLK) which is
@@ -147,68 +149,69 @@
                     removed.
                 </p>
                 <div class="text-center my-2 py-2"
-                style="font-size: 25px;background-color: rgba(244, 246, 248, 0.514);">
-                <b class="text-center text-danger">Truth Table</b>
-                <table class="table table-hover table-bordered">
-                    <thead>
-                        <tr>
-                            <th scope="col">clk</th>
-                            <th scope="col">J</th>
-                            <th scope="col">K</th>
-                            <th scope="col">Q</th>
-                            <th scope="col">Q<sup>'</sup></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th>&uarr;</th>
-                            <td>0</td>
-                            <td>0</td>
-                            <td colspan="2">Previous</td>
+                    style="font-size: 25px;background-color: rgba(244, 246, 248, 0.514);">
+                    <b class="text-center text-danger">Truth Table</b>
+                    <table class="table table-hover table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">clk</th>
+                                <th scope="col">J</th>
+                                <th scope="col">K</th>
+                                <th scope="col">Q</th>
+                                <th scope="col">Q<sup>'</sup></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>&uarr;</th>
+                                <td>0</td>
+                                <td>0</td>
+                                <td colspan="2">Previous</td>
 
-                        </tr>
-                        <tr>
-                            <th>&uarr;</th>
-                            <td>0</td>
-                            <td>1</td>
-                            <td>0</td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <th>&uarr;</th>
-                            <td>1</td>
-                            <td>0</td>
-                            <td>1</td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <th>&uarr;</th>
-                            <td>1</td>
-                            <td>1</td>
-                            <td colspan="2">Toggle</td>
+                            </tr>
+                            <tr>
+                                <th>&uarr;</th>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <th>&uarr;</th>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <th>&uarr;</th>
+                                <td>1</td>
+                                <td>1</td>
+                                <td colspan="2">Toggle</td>
 
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="desc">
-                <h2>Formula:-</h2>
-                <p>To find next state <br> Q(n+1) = J*Q'(n) + K'*Q(n)</p>
-                <p>Where,</p>
-                <ul>
-                    <li>Q(n) &rAarr; Previous state or output of Jk master slave</li>
-                    <li>Q(n+1) &rAarr; Next state or output of Jk master slave</li>
-                    <li>J,K &rAarr; Inputs of JK master slave</li>
-                </ul>
-            </div>
-            <div class="desc">
-                <h2>Working:-</h2>
-                <ol>
-                    <li>Master is positve level triggred and Slave is negative level triggred</li>
-                    <li>When clock pulse is one master is activate and slave is deactivated, when clock pulse goes to zero master deactivates and slave activates.</li>
-                    <li>For different combination of JK Truth Table shown above</li>
-                </ol>
-            </div>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="desc">
+                    <h2>Formula:-</h2>
+                    <p>To find next state <br> Q(n+1) = J*Q'(n) + K'*Q(n)</p>
+                    <p>Where,</p>
+                    <ul>
+                        <li>Q(n) &rAarr; Previous state or output of Jk master slave</li>
+                        <li>Q(n+1) &rAarr; Next state or output of Jk master slave</li>
+                        <li>J,K &rAarr; Inputs of JK master slave</li>
+                    </ul>
+                </div>
+                <div class="desc">
+                    <h2>Working:-</h2>
+                    <ol>
+                        <li>Master is positve level triggred and Slave is negative level triggred</li>
+                        <li>When clock pulse is one master is activate and slave is deactivated, when clock pulse goes
+                            to zero master deactivates and slave activates.</li>
+                        <li>For different combination of JK Truth Table shown above</li>
+                    </ol>
+                </div>
             </div>
 
             <div class="box" id="procedure">
@@ -217,23 +220,312 @@
                 </div>
                 <div class="desc1">
                     <ol type="1" class="desc">
-                        <li> To design JK Master-Slave their is requirement of one 3-input nand gate IC(74LS10) and three 2-input nand gate IC(74LS00).</li>
+                        <li> To design JK Master-Slave their is requirement of one 3-input nand gate IC(74LS10) and
+                            three 2-input nand gate IC(74LS00).</li>
                         <li> Connect the circuit as shown in figure.</li>
                         <li> Connect 5V supply to the circuit.</li>
                         <li> Turn on the supply and write the reading.</li>
                         <li> And verify it from the Truth-Table.</li>
                     </ol>
                 </div>
-                    
+
             </div>
+
             <div class="box" id="animation">
                 <div class="title">
                     <h2 class="heading">Animation</h2>
                 </div>
+                <div class="desc"
+                    style="display: flex; justify-content: center; align-items: center; margin-top: 20px; flex-direction: column;">
+                    <p style="text-align: center; margin-bottom: 15px;">
+                        This animation shows the working of the JK Master-Slave Flip-Flop.
+                    </p>
+                    <video id="jk-animation-video" class="video-js vjs-big-play-centered" controls preload="auto"
+                        width="640" height="360" poster="images/Master Slave.png" data-setup="{}">
+                        <source src="videos/JK_Master_Slave_Animation.mp4" type="video/mp4" />
+                        <p class="vjs-no-js">
+                            To view this video please enable JavaScript.
+                        </p>
+                    </video>
+                </div>
+            </div>
+
+            <div class="box" id="simulator">
+                <div class="title">
+                    <h2 class="heading">Simulator</h2>
+                </div>
+                <div class="desc" style="flex-direction: column; align-items: center;">
+                    <p id="sim-instructions">
+                        <strong>Task:</strong> Re-create the JK Master-Slave circuit by connecting the nodes.
+                        Click an output node (orange) and its valid input nodes (blue) will glow.
+                        The simulator will only activate once all 21 wires are correctly connected.
+                    </p>
+                    <p id="sim-complete-msg" style="display:none; color: #008000; font-weight: bold;">
+                        Circuit Complete! The simulator is now active.
+                    </p>
+
+                    <div id="sim-controls">
+                        <button id="j-toggle" class="sim-button" data-value="0" disabled>J = 0</button>
+                        <button id="k-toggle" class="sim-button" data-value="0" disabled>K = 0</button>
+                        <button id="clk-pulse" class="sim-button" disabled>Pulse CLK</button>
+                        <button id="reset-wires" class="sim-button" style="background-color: #dc3545;">Reset
+                            Wires</button>
+                    </div>
+                    <div class="circuit-wrapper">
+                        <div id="circuit-board">
+                            <svg id="wire-layer"></svg>
+
+                            <div id="input-j" class="sim-component sim-input">
+                                J
+                                <div class="node out" data-node="J_out" style="top: 12px; right: -8px;"></div>
+                            </div>
+                            <div id="input-k" class="sim-component sim-input">
+                                K
+                                <div class="node out" data-node="K_out" style="top: 12px; right: -8px;"></div>
+                            </div>
+                            <div id="input-clk" class="sim-component sim-input">
+                                CLK
+                                <div class="node out" data-node="CLK_out" style="top: 12px; right: -8px;"></div>
+                            </div>
+
+                            <div id="gate-nand1" class="sim-component gate nand3">
+                                <div class="node in" data-node="nand1_in1" style="top: 4px; left: -8px;"></div>
+                                <div class="node in" data-node="nand1_in2" style="top: 22px; left: -8px;"></div>
+                                <div class="node in" data-node="nand1_in3" style="top: 40px; left: -8px;"></div>
+                                <div class="node out" data-node="nand1_out" style="top: 22px; right: -8px;"></div>
+                            </div>
+                            <div id="gate-nand2" class="sim-component gate nand3">
+                                <div class="node in" data-node="nand1_in1" style="top: 4px; left: -8px;"></div>
+                                <div class="node in" data-node="nand1_in2" style="top: 22px; left: -8px;"></div>
+                                <div class="node in" data-node="nand1_in3" style="top: 40px; left: -8px;"></div>
+                                <div class="node out" data-node="nand1_out" style="top: 22px; right: -8px;"></div>
+                            </div>
+                            <div id="gate-nand3" class="sim-component gate nand2">
+                                <div class="node in" data-node="nand3_in1" style="top: 10px; left: -8px;"></div>
+                                <div class="node in" data-node="nand3_in2" style="top: 25px; left: -8px;"></div>
+                                <div class="node out" data-node="nand3_out" style="top: 17px; right: -8px;"></div>
+                            </div>
+                            <div id="gate-nand4" class="sim-component gate nand2">
+                                <div class="node in" data-node="nand3_in1" style="top: 10px; left: -8px;"></div>
+                                <div class="node in" data-node="nand3_in2" style="top: 25px; left: -8px;"></div>
+                                <div class="node out" data-node="nand3_out" style="top: 17px; right: -8px;"></div>
+                            </div>
+
+                            <div id="gate-inv" class="sim-component gate inv">
+                                <div class="node in" data-node="inv_in" style="top: 12px; left: -8px;"></div>
+                                <div class="node out" data-node="inv_out" style="top: 12px; right: -8px;"></div>
+                            </div>
+
+                            <div id="gate-nand5" class="sim-component gate nand2">
+                                <div class="node in" data-node="nand3_in1" style="top: 10px; left: -8px;"></div>
+                                <div class="node in" data-node="nand3_in2" style="top: 25px; left: -8px;"></div>
+                                <div class="node out" data-node="nand3_out" style="top: 17px; right: -8px;"></div>
+                            </div>
+                            <div id="gate-nand6" class="sim-component gate nand2">
+                                <div class="node in" data-node="nand3_in1" style="top: 10px; left: -8px;"></div>
+                                <div class="node in" data-node="nand3_in2" style="top: 25px; left: -8px;"></div>
+                                <div class="node out" data-node="nand3_out" style="top: 17px; right: -8px;"></div>
+                            </div>
+                            <div id="gate-nand7" class="sim-component gate nand2">
+                                <div class="node in" data-node="nand3_in1" style="top: 10px; left: -8px;"></div>
+                                <div class="node in" data-node="nand3_in2" style="top: 25px; left: -8px;"></div>
+                                <div class="node out" data-node="nand3_out" style="top: 17px; right: -8px;"></div>
+                            </div>
+                            <div id="gate-nand8" class="sim-component gate nand2">
+                                <div class="node in" data-node="nand3_in1" style="top: 10px; left: -8px;"></div>
+                                <div class="node in" data-node="nand3_in2" style="top: 25px; left: -8px;"></div>
+                                <div class="node out" data-node="nand3_out" style="top: 17px; right: -8px;"></div>
+                            </div>
+
+                            <div id="output-q" class="sim-component sim-output">
+                                Q
+                                <div class="led led-off" style="top: 15px; left: -25px;"></div>
+                                <div class="node in" data-node="Q_in" style="top: 12px; left: -8px;"></div>
+                            </div>
+                            <div id="output-qbar" class="sim-component sim-output">
+                                Q'
+                                <div class="led led-on" style="top: 15px; left: -25px;"></div>
+                                <div class="node in" data-node="Q_bar_in" style="top: 12px; left: -8px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="observation">
+                <div class="title">
+                    <h2 class="heading">Observations</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc" style="margin-bottom: 20px;">
+                        First, build the circuit in the simulator. Once complete, test all J/K combinations.
+                        The table will automatically record the output.
+                    </p>
+
+                    <div class="table-responsive">
+                        <table id="observation-table" class="table table-hover table-bordered text-center">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">Clock Pulse (CLK)</th>
+                                    <th scope="col">Input (J)</th>
+                                    <th scope="col">Input (K)</th>
+                                    <th scope="col">Observed Output (Q)</th>
+                                    <th scope="col">Observed Output (Q')</th>
+                                    <th scope="col">Remarks (Condition)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-j="0" data-k="0">
+                                    <th>&uarr;</th>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr data-j="0" data-k="1">
+                                    <th>&uarr;</th>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr data-j="1" data-k="0">
+                                    <th>&uarr;</th>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr data-j="1" data-k="1">
+                                    <th>&uarr;</th>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="result">
+                <div class="title">
+                    <h2 class="heading">Result</h2>
+                </div>
+                <div class="desc1">
+                    <p id="result-placeholder" class="desc"
+                        style="line-height: 1.8; color: #dc3545; font-style: italic;">
+                        Please complete the "Observations" table by building the circuit and running the simulator for
+                        all four J/K combinations. The result will appear here.
+                    </p>
+                    <div id="result-content" style="display: none;">
+                        <p class="desc" style="line-height: 1.8;">
+                            The JK Master-Slave Flip-Flop was successfully built and simulated using elementary NAND
+                            gates.
+                        </p>
+                        <p class="desc" style="line-height: 1.8; margin-top: 15px;">
+                            The results from the simulator were automatically recorded in the "Observations" table. Upon
+                            comparison, it is found that the observed outputs for Q and Q' for all combinations of J and
+                            K (No Change, Reset, Set, and Toggle) perfectly match the theoretical Truth Table.
+                        </p>
+                        <p class="desc" style="line-height: 1.8; margin-top: 15px;">
+                            This verifies the correct operation of the JK Master-Slave Flip-Flop and confirms that the
+                            design successfully eliminates the race-around condition. The aim of the experiment is
+                            therefore achieved.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="precaution">
+                <div class="title">
+                    <h2 class="heading">Precaution</h2>
+                </div>
+                <div class="desc1">
+                    <p class="desc" style="margin-bottom: 20px;">
+                        To ensure you get the correct results from the simulator, please follow these precautions. Click
+                        on each item to expand.
+                    </p>
+
+                    <div class="precaution-item">
+                        <button class="precaution-toggle">
+                            <span class="toggle-icon">+</span> Follow Wiring Hints
+                        </button>
+                        <div class="precaution-content">
+                            <p>
+                                
+                                You must click an **orange** (output) node first. The correct **blue** (input) nodes
+                                will begin to glow, guiding your connection.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="precaution-item">
+                        <button class="precaution-toggle">
+                            <span class="toggle-icon">+</span> Set Inputs Before Clocking
+                        </button>
+                        <div class="precaution-content">
+                            <p>
+                                
+                                After the circuit is built, always set your desired <strong>J</strong> and
+                                <strong>K</strong> input values *before* you click the <strong>Pulse CLK</strong>
+                                button.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="precaution-item">
+                        <button class="precaution-toggle">
+                            <span class="toggle-icon">+</span> Use the Reset Button
+                        </button>
+                        <div class="precaution-content">
+                            <p>
+                                
+                                If you get stuck or make a mistake, use the "Reset Wires" button. This will clear all
+                                wires and restart the simulation, allowing you to try again.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="precaution-item">
+                        <button class="precaution-toggle">
+                            <span class="toggle-icon">+</span> Verify All Combinations
+                        </button>
+                        <div class="precaution-content">
+                            <p>
+                                
+                                To confirm the experiment, you must test all four possible input combinations *after*
+                                the circuit is complete.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="references">
+                <div class="title">
+                    <h2 class="heading">References</h2>
+                </div>
+                <div class="desc1">
+                    <ol class="desc" style="line-height: 1.9; margin-left: 20px;">
+                        <li>
+                            Morris, M. M., & Ciletti, M. D. (2018).
+                            <em>Digital Design: With an Introduction to the Verilog HDL, VHDL, and SystemVerilog (6th
+                                Edition)</em>.
+                            Pearson.
+                        </li>
+                        <li>
+                            Floyd, T. L. (2017).
+                            <em>Digital Fundamentals (11th Edition)</em>.
+                            Pearson.
+                        </li>
+                    </ol>
+                </div>
+            </div>
         </div>
     </section>
-    <!-- VideoJS to beautify video player -->
+
     <script src="https://vjs.zencdn.net/7.17.0/video.min.js"></script>
+
+    <script src="JK.js"></script>
 </body>
 
 </html>

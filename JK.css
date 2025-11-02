@@ -116,14 +116,11 @@ header .navigation li a {
     header div{
         display: flex;
         flex-direction: row;
-        /* width: 100%; */
         justify-content: center;
-        /* gap: 1rem; */
     }
     header div h1 {
         font-size: 1rem;
         color: white;
-        /* width: 100%; */
         margin-top: 10px;
     }
     header .navigation{
@@ -290,279 +287,10 @@ nav .boxq a img {
     background-color: rgba(0, 0, 0, 0.075);
   }
   
-  .table-primary,
-  .table-primary > th,
-  .table-primary > td {
-    background-color: #b8daff;
-  }
-  
-  .table-primary th,
-  .table-primary td,
-  .table-primary thead th,
-  .table-primary tbody + tbody {
-    border-color: #7abaff;
-  }
-  
-  .table-hover .table-primary:hover {
-    background-color: #9fcdff;
-  }
-  
-  .table-hover .table-primary:hover > td,
-  .table-hover .table-primary:hover > th {
-    background-color: #9fcdff;
-  }
-  
-  .table-secondary,
-  .table-secondary > th,
-  .table-secondary > td {
-    background-color: #d6d8db;
-  }
-  
-  .table-secondary th,
-  .table-secondary td,
-  .table-secondary thead th,
-  .table-secondary tbody + tbody {
-    border-color: #b3b7bb;
-  }
-  
-  .table-hover .table-secondary:hover {
-    background-color: #c8cbcf;
-  }
-  
-  .table-hover .table-secondary:hover > td,
-  .table-hover .table-secondary:hover > th {
-    background-color: #c8cbcf;
-  }
-  
-  .table-success,
-  .table-success > th,
-  .table-success > td {
-    background-color: #c3e6cb;
-  }
-  
-  .table-success th,
-  .table-success td,
-  .table-success thead th,
-  .table-success tbody + tbody {
-    border-color: #8fd19e;
-  }
-  
-  .table-hover .table-success:hover {
-    background-color: #b1dfbb;
-  }
-  
-  .table-hover .table-success:hover > td,
-  .table-hover .table-success:hover > th {
-    background-color: #b1dfbb;
-  }
-  
-  .table-info,
-  .table-info > th,
-  .table-info > td {
-    background-color: #bee5eb;
-  }
-  
-  .table-info th,
-  .table-info td,
-  .table-info thead th,
-  .table-info tbody + tbody {
-    border-color: #86cfda;
-  }
-  
-  .table-hover .table-info:hover {
-    background-color: #abdde5;
-  }
-  
-  .table-hover .table-info:hover > td,
-  .table-hover .table-info:hover > th {
-    background-color: #abdde5;
-  }
-  
-  .table-warning,
-  .table-warning > th,
-  .table-warning > td {
-    background-color: #ffeeba;
-  }
-  
-  .table-warning th,
-  .table-warning td,
-  .table-warning thead th,
-  .table-warning tbody + tbody {
-    border-color: #ffdf7e;
-  }
-  
-  .table-hover .table-warning:hover {
-    background-color: #ffe8a1;
-  }
-  
-  .table-hover .table-warning:hover > td,
-  .table-hover .table-warning:hover > th {
-    background-color: #ffe8a1;
-  }
-  
-  .table-danger,
-  .table-danger > th,
-  .table-danger > td {
-    background-color: #f5c6cb;
-  }
-  
-  .table-danger th,
-  .table-danger td,
-  .table-danger thead th,
-  .table-danger tbody + tbody {
-    border-color: #ed969e;
-  }
-  
-  .table-hover .table-danger:hover {
-    background-color: #f1b0b7;
-  }
-  
-  .table-hover .table-danger:hover > td,
-  .table-hover .table-danger:hover > th {
-    background-color: #f1b0b7;
-  }
-  
-  .table-light,
-  .table-light > th,
-  .table-light > td {
-    background-color: #fdfdfe;
-  }
-  
-  .table-light th,
-  .table-light td,
-  .table-light thead th,
-  .table-light tbody + tbody {
-    border-color: #fbfcfc;
-  }
-  
-  .table-hover .table-light:hover {
-    background-color: #ececf6;
-  }
-  
-  .table-hover .table-light:hover > td,
-  .table-hover .table-light:hover > th {
-    background-color: #ececf6;
-  }
-  
-  .table-dark,
-  .table-dark > th,
-  .table-dark > td {
-    background-color: #c6c8ca;
-  }
-  
-  .table-dark th,
-  .table-dark td,
-  .table-dark thead th,
-  .table-dark tbody + tbody {
-    border-color: #95999c;
-  }
-  
-  .table-hover .table-dark:hover {
-    background-color: #b9bbbe;
-  }
-  
-  .table-hover .table-dark:hover > td,
-  .table-hover .table-dark:hover > th {
-    background-color: #b9bbbe;
-  }
-  
-  .table-active,
-  .table-active > th,
-  .table-active > td {
-    background-color: rgba(0, 0, 0, 0.075);
-  }
-  
-  .table-hover .table-active:hover {
-    background-color: rgba(0, 0, 0, 0.075);
-  }
-  
-  .table-hover .table-active:hover > td,
-  .table-hover .table-active:hover > th {
-    background-color: rgba(0, 0, 0, 0.075);
-  }
-  
   .table .thead-dark th {
     color: #fff;
     background-color: #343a40;
     border-color: #454d55;
-  }
-  
-  .table .thead-light th {
-    color: #495057;
-    background-color: #e9ecef;
-    border-color: #dee2e6;
-  }
-  
-  .table-dark {
-    color: #fff;
-    background-color: #343a40;
-  }
-  
-  .table-dark th,
-  .table-dark td,
-  .table-dark thead th {
-    border-color: #454d55;
-  }
-  
-  .table-dark.table-bordered {
-    border: 0;
-  }
-  
-  .table-dark.table-striped tbody tr:nth-of-type(odd) {
-    background-color: rgba(255, 255, 255, 0.05);
-  }
-  
-  .table-dark.table-hover tbody tr:hover {
-    color: #fff;
-    background-color: rgba(255, 255, 255, 0.075);
-  }
-  
-  @media (max-width: 575.98px) {
-    .table-responsive-sm {
-      display: block;
-      width: 100%;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-    .table-responsive-sm > .table-bordered {
-      border: 0;
-    }
-  }
-  
-  @media (max-width: 767.98px) {
-    .table-responsive-md {
-      display: block;
-      width: 100%;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-    .table-responsive-md > .table-bordered {
-      border: 0;
-    }
-  }
-  
-  @media (max-width: 991.98px) {
-    .table-responsive-lg {
-      display: block;
-      width: 100%;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-    .table-responsive-lg > .table-bordered {
-      border: 0;
-    }
-  }
-  
-  @media (max-width: 1199.98px) {
-    .table-responsive-xl {
-      display: block;
-      width: 100%;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-    .table-responsive-xl > .table-bordered {
-      border: 0;
-    }
   }
   
   .table-responsive {
@@ -626,3 +354,347 @@ nav .boxq a img {
         font-size: 0.7rem;
     }
 }
+
+/* --- Style for Observation Table Update --- */
+.row-updated {
+    animation: flash-green 0.7s ease-out;
+}
+
+@keyframes flash-green {
+    0% {
+        background-color: rgba(0, 255, 0, 0.4);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+/* --- Final Simulator Styles --- */
+
+#sim-instructions {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#sim-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.sim-button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(0, 52, 65);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sim-button:hover {
+    background-color: rgba(0, 139, 139, 0.74);
+}
+
+.sim-button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+#circuit-board {
+    position: relative;
+    width: 1000px;
+    /* max-width: 100%; Ensure it's responsive */
+    height: 450px;
+    background-color: #f4f4f4;
+    border: 2px solid #333;
+    margin: 20px auto;
+    overflow: hidden;
+    /* The background diagram is removed, as our gates form the diagram */
+}
+
+#wire-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none; /* Make sure SVG doesn't block clicks */
+}
+
+.wire {
+    stroke: #000;
+    stroke-width: 3;
+    fill: none;
+}
+
+.sim-component {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #555;
+    border-radius: 5px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.gate {
+    width: 60px;
+}
+.nand2 { height: 50px; }
+.nand3 { height: 60px; }
+.inv { height: 40px; width: 40px; }
+
+.sim-input, .sim-output {
+    width: 50px;
+    height: 40px;
+}
+
+.node {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: 2px solid;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+    z-index: 3; /* Must be highest */
+}
+
+.node.in {
+    border-color: #007bff; /* Blue for inputs */
+    background-color: #cce5ff;
+}
+.node.out {
+    border-color: #fd7e14; /* Orange for outputs */
+    background-color: #ffe8d1;
+}
+
+.node:hover {
+    transform: scale(1.2);
+}
+
+.node.selected {
+    background-color: #28a745; /* Green when selected */
+    border-color: #28a745;
+}
+
+.node.error {
+    animation: shake 0.5s;
+    background-color: #dc3545; /* Red on error */
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* --- Component Positions (Aligned to Master Slave.png) --- */
+
+/* --- Component Positions (Aligned to Diagram) --- */
+#input-j {
+  top: 75px;
+  left: 20px;
+}
+
+#input-k {
+  top: 315px;
+  left: 20px;
+}
+
+#input-clk {
+  top: 370px;
+  left: 20px;
+}
+
+#gate-nand1 {
+  top: 65px;
+  left: 200px;
+  background-image: url('images/nand3.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#gate-nand2 {
+  top: 305px;
+  left: 200px;
+  background-image: url('images/nand3.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#gate-nand3 {
+  top: 120px;
+  left: 350px;
+  background-image: url('images/nand2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#gate-nand4 {
+  top: 230px;
+  left: 350px;
+  background-image: url('images/nand2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#gate-inv {
+  top: 370px;
+  left: 280px;
+  background-image: url('images/not.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#gate-nand5 {
+  top: 120px;
+  left: 550px;
+  background-image: url('images/nand2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#gate-nand6 {
+  top: 230px;
+  left: 550px;
+  background-image: url('images/nand2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#gate-nand7 {
+  top: 120px;
+  left: 700px;
+  background-image: url('images/nand2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#gate-nand8 {
+  top: 230px;
+  left: 700px;
+  background-image: url('images/nand2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#output-q {
+  top: 125px;
+  left: 900px;
+}
+
+#output-qbar {
+  top: 235px;
+  left: 900px;
+}
+
+/* Keep LED styles for the final outputs */
+.led {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #333;
+    border-radius: 50%;
+}
+.led-on {
+    background-color: #00ff00;
+    box-shadow: 0 0 10px #00ff00;
+}
+.led-off {
+    background-color: #ff0000;
+    box-shadow: 0 0 10px #ff0000;
+}
+
+
+/* --- Precaution Section Styles --- */
+.precaution-item {
+    border: 1px solid #dee2e6;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    overflow: hidden; 
+}
+
+.precaution-toggle {
+    width: 100%;
+    background-color: #f1f1f1;
+    border: none;
+    padding: 15px;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.precaution-toggle:hover {
+    background-color: #ddd;
+}
+
+.toggle-icon {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    font-family: monospace;
+    width: 20px; 
+    text-align: center;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.precaution-toggle.active .toggle-icon {
+    transform: rotate(45deg);
+}
+
+.precaution-content {
+    padding: 0 18px; 
+    background-color: white;
+    max-height: 0; /* HIDDEN BY DEFAULT */
+    overflow: hidden;
+    transition: max-height 0.3s ease-out; /* The transition */
+    border-top: 1px solid #eee;
+}
+
+.precaution-content p {
+    padding: 15px 0; 
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* --- Hint System Styles --- */
+.node.hint-glow {
+    animation: hint-pulse 1s infinite;
+}
+
+@keyframes hint-pulse {
+    0% {
+        background-color: #cce5ff; /* Default blue */
+        box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+    }
+    70% {
+        background-color: #d4edda; /* Hint green */
+        box-shadow: 0 0 10px 10px rgba(40, 167, 69, 0);
+    }
+    100% {
+        background-color: #cce5ff; /* Default blue */
+        box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+    }
+}
+
