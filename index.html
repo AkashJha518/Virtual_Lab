@@ -15,7 +15,7 @@
 
 <body>
     <header>
-        <div>
+        <div class="logo-container">
             <img class="logo" src="https://www.vlab.andcollege.du.ac.in/images/logo.png">
 
             <h1>V-Lab @ ANDC</h1>
@@ -109,13 +109,13 @@
             </div>
             <div class="box" id="theory">
                 <div class="title">
-                    <h1 class="heading">Principle</h1>
+                    <h2 class="heading">Principle</h2>
                 </div>
                 <p class="desc">
                     Master Slave is a type of JK flip flop in which race around condition problem is removed. In this
                     flip flop there is two stage first stage is Master and second is Slave.
                 </p>
-                <h1 class="desc-heading">Race Around Condition</h1>
+                <h3 class="desc-heading">Race Around Condition</h3>
                 <p class="desc">
                     Race around Condition: Toggling more than once within a clock cycle.
                     <br>
@@ -136,7 +136,7 @@
                 <img src="images/Master Slave.png"
                     style="width: 100%; max-width: 800px; height: auto; display: block; margin: 20px auto;"
                     alt="JK Master Slave Circuit Diagram"> <br>
-                <h1 class="desc-heading">How the race around condition is removed?</h1>
+                <h3 class="desc-heading">How the race around condition is removed?</h3>
                 <p class="desc">
                     As shown in above Figure there is a clock(CLK) which is
                     connected to first stage(Master) and via
@@ -241,7 +241,7 @@
                         This animation shows the working of the JK Master-Slave Flip-Flop.
                     </p>
                     <video id="jk-animation-video" class="video-js vjs-big-play-centered" controls preload="auto"
-                        width="640" height="360" poster="images/Master Slave.png" data-setup="{}">
+                        poster="images/Master Slave.png" data-setup="{}">
                         <source src="videos/JK_Master_Slave_Animation.mp4" type="video/mp4" />
                         <p class="vjs-no-js">
                             To view this video please enable JavaScript.
@@ -271,82 +271,84 @@
                         <button id="reset-wires" class="sim-button" style="background-color: #dc3545;">Reset
                             Wires</button>
                     </div>
-                    <div class="circuit-wrapper">
-                        <div id="circuit-board">
-                            <svg id="wire-layer"></svg>
+                    
+                    <div id="circuit-board">
+                        
+                        <div class="aspect-ratio-spacer"></div>
+                        
+                        <svg id="wire-layer" viewBox="0 0 1000 450" preserveAspectRatio="none"></svg>
 
-                            <div id="input-j" class="sim-component sim-input">
-                                J
-                                <div class="node out" data-node="J_out" style="top: 12px; right: -8px;"></div>
-                            </div>
-                            <div id="input-k" class="sim-component sim-input">
-                                K
-                                <div class="node out" data-node="K_out" style="top: 12px; right: -8px;"></div>
-                            </div>
-                            <div id="input-clk" class="sim-component sim-input">
-                                CLK
-                                <div class="node out" data-node="CLK_out" style="top: 12px; right: -8px;"></div>
-                            </div>
+                        <div id="input-j" class="sim-component sim-input">
+                            J
+                            <div class="node out" data-node="J_out" style="top: 30%; right: -16%;"></div>
+                        </div>
+                        <div id="input-k" class="sim-component sim-input">
+                            K
+                            <div class="node out" data-node="K_out" style="top: 30%; right: -16%;"></div>
+                        </div>
+                        <div id="input-clk" class="sim-component sim-input">
+                            CLK
+                            <div class="node out" data-node="CLK_out" style="top: 30%; right: -16%;"></div>
+                        </div>
 
-                            <div id="gate-nand1" class="sim-component gate nand3">
-                                <div class="node in" data-node="nand1_in1" style="top: 4px; left: -8px;"></div>
-                                <div class="node in" data-node="nand1_in2" style="top: 22px; left: -8px;"></div>
-                                <div class="node in" data-node="nand1_in3" style="top: 40px; left: -8px;"></div>
-                                <div class="node out" data-node="nand1_out" style="top: 22px; right: -8px;"></div>
-                            </div>
-                            <div id="gate-nand2" class="sim-component gate nand3">
-                                <div class="node in" data-node="nand1_in1" style="top: 4px; left: -8px;"></div>
-                                <div class="node in" data-node="nand1_in2" style="top: 22px; left: -8px;"></div>
-                                <div class="node in" data-node="nand1_in3" style="top: 40px; left: -8px;"></div>
-                                <div class="node out" data-node="nand1_out" style="top: 22px; right: -8px;"></div>
-                            </div>
-                            <div id="gate-nand3" class="sim-component gate nand2">
-                                <div class="node in" data-node="nand3_in1" style="top: 10px; left: -8px;"></div>
-                                <div class="node in" data-node="nand3_in2" style="top: 25px; left: -8px;"></div>
-                                <div class="node out" data-node="nand3_out" style="top: 17px; right: -8px;"></div>
-                            </div>
-                            <div id="gate-nand4" class="sim-component gate nand2">
-                                <div class="node in" data-node="nand3_in1" style="top: 10px; left: -8px;"></div>
-                                <div class="node in" data-node="nand3_in2" style="top: 25px; left: -8px;"></div>
-                                <div class="node out" data-node="nand3_out" style="top: 17px; right: -8px;"></div>
-                            </div>
+                        <div id="gate-nand1" class="sim-component gate nand3">
+                            <div class="node in" data-node="nand1_in1" style="top: 6.67%; left: -13.33%;"></div>
+                            <div class="node in" data-node="nand1_in2" style="top: 36.67%; left: -13.33%;"></div>
+                            <div class="node in" data-node="nand1_in3" style="top: 66.67%; left: -13.33%;"></div>
+                            <div class="node out" data-node="nand1_out" style="top: 36.67%; right: -13.33%;"></div>
+                        </div>
+                        <div id="gate-nand2" class="sim-component gate nand3">
+                            <div class="node in" data-node="nand2_in1" style="top: 6.67%; left: -13.33%;"></div>
+                            <div class="node in" data-node="nand2_in2" style="top: 36.67%; left: -13.33%;"></div>
+                            <div class="node in" data-node="nand2_in3" style="top: 66.67%; left: -13.33%;"></div>
+                            <div class="node out" data-node="nand2_out" style="top: 36.67%; right: -13.33%;"></div>
+                        </div>
+                        <div id="gate-nand3" class="sim-component gate nand2">
+                            <div class="node in" data-node="nand3_in1" style="top: 20%; left: -13.33%;"></div>
+                            <div class="node in" data-node="nand3_in2" style="top: 50%; left: -13.33%;"></div>
+                            <div class="node out" data-node="nand3_out" style="top: 35%; right: -13.33%;"></div>
+                        </div>
+                        <div id="gate-nand4" class="sim-component gate nand2">
+                            <div class="node in" data-node="nand4_in1" style="top: 20%; left: -13.33%;"></div>
+                            <div class="node in" data-node="nand4_in2" style="top: 50%; left: -13.33%;"></div>
+                            <div class="node out" data-node="nand4_out" style="top: 35%; right: -13.33%;"></div>
+                        </div>
 
-                            <div id="gate-inv" class="sim-component gate inv">
-                                <div class="node in" data-node="inv_in" style="top: 12px; left: -8px;"></div>
-                                <div class="node out" data-node="inv_out" style="top: 12px; right: -8px;"></div>
-                            </div>
+                        <div id="gate-inv" class="sim-component gate inv">
+                            <div class="node in" data-node="inv_in" style="top: 30%; left: -20%;"></div>
+                            <div class="node out" data-node="inv_out" style="top: 30%; right: -20%;"></div>
+                        </div>
 
-                            <div id="gate-nand5" class="sim-component gate nand2">
-                                <div class="node in" data-node="nand3_in1" style="top: 10px; left: -8px;"></div>
-                                <div class="node in" data-node="nand3_in2" style="top: 25px; left: -8px;"></div>
-                                <div class="node out" data-node="nand3_out" style="top: 17px; right: -8px;"></div>
-                            </div>
-                            <div id="gate-nand6" class="sim-component gate nand2">
-                                <div class="node in" data-node="nand3_in1" style="top: 10px; left: -8px;"></div>
-                                <div class="node in" data-node="nand3_in2" style="top: 25px; left: -8px;"></div>
-                                <div class="node out" data-node="nand3_out" style="top: 17px; right: -8px;"></div>
-                            </div>
-                            <div id="gate-nand7" class="sim-component gate nand2">
-                                <div class="node in" data-node="nand3_in1" style="top: 10px; left: -8px;"></div>
-                                <div class="node in" data-node="nand3_in2" style="top: 25px; left: -8px;"></div>
-                                <div class="node out" data-node="nand3_out" style="top: 17px; right: -8px;"></div>
-                            </div>
-                            <div id="gate-nand8" class="sim-component gate nand2">
-                                <div class="node in" data-node="nand3_in1" style="top: 10px; left: -8px;"></div>
-                                <div class="node in" data-node="nand3_in2" style="top: 25px; left: -8px;"></div>
-                                <div class="node out" data-node="nand3_out" style="top: 17px; right: -8px;"></div>
-                            </div>
+                        <div id="gate-nand5" class="sim-component gate nand2">
+                            <div class="node in" data-node="nand5_in1" style="top: 20%; left: -13.33%;"></div>
+                            <div class="node in" data-node="nand5_in2" style="top: 50%; left: -13.33%;"></div>
+                            <div class="node out" data-node="nand5_out" style="top: 35%; right: -13.33%;"></div>
+                        </div>
+                        <div id="gate-nand6" class="sim-component gate nand2">
+                            <div class="node in" data-node="nand6_in1" style="top: 20%; left: -13.33%;"></div>
+                            <div class="node in" data-node="nand6_in2" style="top: 50%; left: -13.33%;"></div>
+                            <div class="node out" data-node="nand6_out" style="top: 35%; right: -13.33%;"></div>
+                        </div>
+                        <div id="gate-nand7" class="sim-component gate nand2">
+                            <div class="node in" data-node="nand7_in1" style="top: 20%; left: -13.33%;"></div>
+                            <div class="node in" data-node="nand7_in2" style="top: 50%; left: -13.33%;"></div>
+                            <div class="node out" data-node="nand7_out" style="top: 35%; right: -13.33%;"></div>
+                        </div>
+                        <div id="gate-nand8" class="sim-component gate nand2">
+                            <div class="node in" data-node="nand8_in1" style="top: 20%; left: -13.33%;"></div>
+                            <div class="node in" data-node="nand8_in2" style="top: 50%; left: -13.33%;"></div>
+                            <div class="node out" data-node="nand8_out" style="top: 35%; right: -13.33%;"></div>
+                        </div>
 
-                            <div id="output-q" class="sim-component sim-output">
-                                Q
-                                <div class="led led-off" style="top: 15px; left: -25px;"></div>
-                                <div class="node in" data-node="Q_in" style="top: 12px; left: -8px;"></div>
-                            </div>
-                            <div id="output-qbar" class="sim-component sim-output">
-                                Q'
-                                <div class="led led-on" style="top: 15px; left: -25px;"></div>
-                                <div class="node in" data-node="Q_bar_in" style="top: 12px; left: -8px;"></div>
-                            </div>
+                        <div id="output-q" class="sim-component sim-output">
+                            Q
+                            <div class="led led-off" style="top: 37.5%; left: -50%;"></div>
+                            <div class="node in" data-node="Q_in" style="top: 30%; left: -16%;"></div>
+                        </div>
+                        <div id="output-qbar" class="sim-component sim-output">
+                            Q'
+                            <div class="led led-on" style="top: 37.5%; left: -50%;"></div>
+                            <div class="node in" data-node="Q_bar_in" style="top: 30%; left: -16%;"></div>
                         </div>
                     </div>
                 </div>
@@ -455,7 +457,7 @@
                         </button>
                         <div class="precaution-content">
                             <p>
-                                
+
                                 You must click an **orange** (output) node first. The correct **blue** (input) nodes
                                 will begin to glow, guiding your connection.
                             </p>
@@ -467,7 +469,7 @@
                         </button>
                         <div class="precaution-content">
                             <p>
-                                
+
                                 After the circuit is built, always set your desired <strong>J</strong> and
                                 <strong>K</strong> input values *before* you click the <strong>Pulse CLK</strong>
                                 button.
@@ -480,7 +482,7 @@
                         </button>
                         <div class="precaution-content">
                             <p>
-                                
+
                                 If you get stuck or make a mistake, use the "Reset Wires" button. This will clear all
                                 wires and restart the simulation, allowing you to try again.
                             </p>
@@ -492,7 +494,7 @@
                         </button>
                         <div class="precaution-content">
                             <p>
-                                
+
                                 To confirm the experiment, you must test all four possible input combinations *after*
                                 the circuit is complete.
                             </p>
